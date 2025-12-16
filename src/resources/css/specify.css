@@ -1,0 +1,84 @@
+@import 'tailwindcss';
+
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@layer base {
+    body {
+        @apply bg-gray-100;
+    }
+    main{
+        @apply my-8 px-4;
+        h1, h2, h3{
+            @apply my-4;
+        }
+        h1, h2, h3{
+            @apply font-bold;
+        }
+        h1{
+            @apply text-4xl;
+        }
+        h2{
+            @apply text-3xl;
+        }
+        h3{
+            @apply text-2xl;
+        }
+        h4{
+            @apply text-xl;
+        }
+        h5{
+            @apply text-lg;
+        }
+        h6{
+            @apply uppercase;
+        }
+        p{
+            @apply mb-6;
+        }
+        hr{
+            @apply my-12;
+        }
+    }
+    pre{
+        @apply overflow-x-scroll bg-gray-200 p-2 rounded;
+    }
+    .specify-sidebar{
+        @apply mt-12;
+        & > .specify-sidebar-list{
+            .specify-node{
+                .specify-node-label{
+                    @apply flex items-center justify-between;
+                    &:after{
+                        @apply block w-8 h-8 text-blue-950;
+                        content: '⌄'; 
+                    }
+                }
+            } 
+            & > .specify-node{
+                @apply mb-6;
+                & > .specify-node-label{
+                    @apply text-blue-950 font-semibold uppercase text-lg;
+                }
+                .specify-node-children{
+                    @apply pl-2;
+                    .specify-node-label{
+                        @apply text-blue-950 font-semibold text-sm capitalize;
+                    }
+                    .specify-node{
+                        @apply py-1 block;
+                    }
+                    .specify-node-link{
+                        &:hover{
+                            @apply underline;
+                        }
+                        @apply capitalize;
+                        &.specify-node-link--active{
+                            @apply font-bold underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
