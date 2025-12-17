@@ -18,28 +18,28 @@ This package provides routes (default /specify) that lists the various outputs f
 
 **Installation**
 
-1. Require the package via Composer (replace with actual vendor/package name):
+1. Require the package via Composer:
 
 ```bash
-composer require vendor/laravel-specify
+composer require blimeydev/laravel-specify
 ```
 
 2. If your application does not use package auto-discovery, register the service provider in `config/app.php`:
 
-   \- Add `\Vendor\Specify\SpecifyPagesServiceProvider::class` to the `providers` array.
+   \- Add `\BlimeyDev\LaravelSpecify\SpecifyPagesServiceProvider::class` to the `providers` array.
 
 3. Publish the configuration, views, and assets (if applicable):
 
 ```bash
-php artisan vendor:publish --provider="Vendor\Specify\SpecifyPagesServiceProvider" --tag="specify-config"
-php artisan vendor:publish --provider="Vendor\Specify\SpecifyPagesServiceProvider" --tag="specify-views"
-php artisan vendor:publish --provider="Vendor\Specify\SpecifyPagesServiceProvider" --tag="specify-compiled-assets"
+php artisan vendor:publish --provider="BlimeyDev\LaravelSpecify\SpecifyPagesServiceProvider" --tag="specify-config"
+php artisan vendor:publish --provider="BlimeyDev\LaravelSpecify\SpecifyPagesServiceProvider" --tag="specify-views"
+php artisan vendor:publish --provider="BlimeyDev\LaravelSpecify\SpecifyPagesServiceProvider" --tag="specify-compiled-assets"
 ```
 
 If you would like to publish the source files, you can do so via
 
 ```bash
-php artisan vendor:publish --provider="Vendor\Specify\SpecifyPagesServiceProvider" --tag="specify-assets"
+php artisan vendor:publish --provider="BlimeyDev\LaravelSpecify\SpecifyPagesServiceProvider" --tag="specify-assets"
 ```
 
 **Configuration**
